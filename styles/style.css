@@ -11,7 +11,6 @@ html {
 .page {
   display: flex;
   justify-content: center;
-  padding-top: 133px;
   padding-left: 30px;
   padding-right: 30px;
   inline-size: 1200px;
@@ -74,7 +73,7 @@ ol {
 .content__list-container {
   position: relative;
   grid-area: result;
-  overflow-y: scroll;
+  overflow: auto;
   height: 302px;
   max-width: 399px;
   display: flex;
@@ -115,21 +114,17 @@ ol {
   align-items: flex-start;
   width: 100%;
 }
-.content__video-card:active {
+.content__card-link:active {
   background-color: #545050;
 }
 .content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
   width: 194px;
   height: 103px;
   flex-shrink: 0;
   overflow: hidden;
   padding-left: 5px;
-}
-.content__video-card-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 .content__video-card-description-container {
   flex-grow: 1;
@@ -137,7 +132,7 @@ ol {
 .title {
   font-size: 75px;
   font-weight: 700;
-  font-family: Oswald;
+  font-family: 'Oswald',sans-serif;
   line-height: 70.5px;
   width: 259px;
   text-transform: uppercase;
@@ -149,6 +144,9 @@ ol {
 .content__card-link {
   text-decoration: none;
   color:#fff;
+}
+.content__card-link_current {
+  background-color: #545050;
 }
 .content__card-link:hover .content__video-card-title,
 .content__card-link:hover .content__video-card-description {
@@ -171,7 +169,7 @@ ol {
   overflow: hidden;
   font-size: 18px;
   font-weight: 400;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed',sans-serif;
   line-height: 16.2px;
   padding-top: 4px;
 }
@@ -203,7 +201,7 @@ ol {
   color:#fff;
   font-size: 18px;
   font-weight: 400;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed',sans-serif;
   line-height: 21.6px;
   padding-top: 5px;
 }
@@ -242,11 +240,6 @@ ol {
   width: 194px;
   height: 34px;
   font-size: 34px;
-  font-family: Fira Sans Condensed;
-  font-weight: 700;
-  line-height: 21.6px;
-  align-items: center;
-  background-color: transparent;
 }
 .button:hover {
   cursor: pointer;
@@ -305,9 +298,11 @@ ol {
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed',sans-serif;
+  align-items: center;
 }
 .more-button {
   inline-size: calc(100% - 4px);
-  padding-bottom: 11px;
-  align-items: end;
+  padding-bottom: 6px;
+  padding-top: 6px;
 }
