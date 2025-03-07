@@ -142,6 +142,7 @@ ol {
   color: #545050;
 }
 .content__card-link {
+  display: block;
   text-decoration: none;
   color:#fff;
 }
@@ -179,7 +180,7 @@ ol {
   white-space: nowrap;
   font-size: 30px;
   font-weight: 700;
-  font-family: Oswald;
+  font-family: 'Oswald',sans-serif;
   line-height: 30px;
   text-transform: uppercase;
   padding-top: 5px;
